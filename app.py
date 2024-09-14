@@ -28,6 +28,13 @@ open_positions=[
         'location': 'San Jose, California',
         'Salary': '$ 100,000'
 
+        },
+        { 
+        'id': 5,
+        'title': 'UI/UX Engineer',
+        'location': 'Shanghai, China',
+        'Salary': '$ 120,000'
+
         }
 ]
 
