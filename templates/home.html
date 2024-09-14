@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoSphere Careers</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+   
+</head>
+<body>
+
+    <!-- App Name -->
+    <h1 id="careers-heading">InnoSphere Careers</h1>
+
+    <!-- Image/Logo -->
+    <img src="{{ url_for('static',filename='image-career.jpg')}}" alt="Company Logo" >
+
+    <!-- About Company -->
+    <div class="about-company">
+        <p>At InnoSphere, we are committed to driving innovation and providing cutting-edge technology solutions to our clients worldwide. Join us to be a part of a dynamic team shaping the future of the tech industry.</p>
+    </div>
+
+    <!-- Job Openings Template -->
+    <div class="open-positions-section">
+        <h2>Open Positions</h2>
+        <div class="job-listing">
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="contact-btn">
+        <button>
+            Contact Us
+        </button>
+    </div>
+
+</body>
+</html>

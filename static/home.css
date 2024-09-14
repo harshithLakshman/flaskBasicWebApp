@@ -1,0 +1,140 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+img {
+    margin: 0 auto;
+    width: 100%;
+    height: 320px;
+   
+    
+}
+.about-company {
+    font-family: 'Roboto', sans-serif; /* Stylish font from Google Fonts */
+    font-size: 1.2em; /* Adjust size as needed */
+    line-height: 1.6; /* Spacing between lines */
+    color: #0b0b0b; /* Dark text color for contrast */
+    text-align: center; /* Center text horizontally */
+    margin: 20px auto; /* Center block with margin */
+    width: 80%; /* Adjust width as needed */
+    margin-bottom: 70px;
+}
+.job-opening {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+
+.apply-btn {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.apply-btn:hover {
+    background-color: #3498db;
+}
+
+#careers-heading{
+    font-family: 'Roboto'; /* Use the bold weight of the Roboto font */
+    font-weight: normal;
+    font-size: 3.3em; /* Larger font size for prominence */
+    font-weight: bold; /* Ensures text is bold */
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #333;
+}
+
+.contact-btn button{
+    background-color: #000000; /* Button background color */
+    color: rgb(255, 255, 255); /* Text color */
+    border-radius: 5px; /* Rounds the corners */
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 1em; /* Adjusts the font size */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s; /* Adds a smooth transition effect for background color */
+    
+}
+
+.contact-btn{
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers the button vertically */
+}
+
+/* Style for the section containing the open positions */
+.open-positions-section {
+    text-align: center; /* Centers the heading text horizontally */
+    margin: 40px auto; /* Adds margin around the section */
+    width: 80%; /* Adjust the width as needed */
+}
+
+/* Style for the heading within the section */
+.open-positions-section h2 {
+    font-family: 'Roboto', sans-serif; /* Use a stylish font */
+    font-size: 3em; /* Adjust the font size */
+    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Heading text color */
+}
+
+/* Style for the container of job items */
+.job-listing {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange job items in a column */
+    align-items: center; /* Center job items horizontally */
+    gap: 20px; /* Space between job items */
+    margin: 0 auto; /* Center the job listing container */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.0rem;
+}
+
+.job-listing h4{
+    font-size: 2rem;
+}
+
+/* Style for each job item */
+.job-item {
+    border: 1px solid #ddd; /* Adds a light grey border */
+    border-radius: 5px; /* Rounds the corners of the border */
+    padding: 10px; /* Adds space inside the border */
+    margin-bottom: 20px; /* Adds space between job items */
+    width: 100%; /* Ensures the item takes full width of its container */
+    max-width: 800px; /* Limits the maximum width for larger screens */
+    background-color: #f4f4f4; /* Background color for better contrast */
+    position: relative; /* Allows positioning of the button */
+}
+
+/* Style for the apply button container */
+.apply-btn-container {
+    text-align: center; /* Centers the button horizontally */
+    margin-top: 20px; /* Adds space above the button */
+}
+
+/* Style for the apply button */
+.apply-btn {
+    background-color: #0c0e0e; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounds the corners of the button */
+    padding: 10px 15px; /* Adds padding inside the button */
+    font-size: 0.8em; /* Adjusts the font size */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s; /* Adds a smooth transition effect for background color */
+    margin-bottom: 5px;
+}
+
+/* Button hover effect */
+.apply-btn:hover {
+    background-color: #57595c; /* Changes background color on hover */
+}
