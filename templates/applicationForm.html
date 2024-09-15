@@ -1,0 +1,30 @@
+<div class="mt-5">
+    <h4 class="mb-4">Application Form</h4>
+    <form action="/jobs/{{jobs['id']}}/apply" method="post">
+        <div class="form-group mt-2">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group mt-2">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group mt-2">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input type="url" class="form-control" id="linkedin" name="linkedin">
+        </div>
+        <div class="form-group mt-2">
+            <label for="education">Education</label>
+            <textarea class="form-control" id="education" name="education" rows="3" required></textarea>
+        </div>
+        <div class="form-group mt-2">
+            <label for="work-experience">Work Experience</label>
+            <textarea class="form-control" id="work-experience" name="work_experience" rows="3" required></textarea>
+        </div>
+        <div class="form-group mt-2">
+            <label for="resume">Resume Link</label>
+            <input type="url" class="form-control" id="resume" name="resume">
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+    </form>
+</div>
