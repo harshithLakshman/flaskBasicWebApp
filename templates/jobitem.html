@@ -3,8 +3,8 @@
         {{job['title']}}
     </h4>
     <div><b>Location</b> {{job['location']}}</div>
-    <div><b>Salary</b> {{job['salary']}}</div>
+    <div><b>Salary</b> {{job['currency']}} {{job['salary']}}</div>
     <div class="apply-btn-container">
-        <a class="btn btn-outline-primary float-right align-middle" type="button" href="mailto:harshith.l2000@gmail.com?subject=Application for {{job['title']}}">Apply</a>
+        <a class="btn btn-outline-primary float-right align-middle" type="button" href="/jobs/{{job['id']}}">Apply</a>
     </div>
 </div>

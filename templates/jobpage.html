@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'bootstrap.html' %}
+    <title>{{jobs['title']}} - Jovian Careers</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+    <div class="container">
+        <h4 class="mt-4">{{jobs['title']}}</h4>
+        <p class="lead mt-">{{jobs['location']}}</p>
+        <p class="lead mb-2"><b>Responsibilities</b></p>
+        <ul> 
+            {% for line in jobs['responsibilities'].split('\n') %}
+            <li>{{line}}</li>
+            {% endfor %}
+        </ul>
+        <p class="lead mb-2"><b>Requirements</b></p>
+        <ol>
+            {% for line in jobs['requirements'].split('\n') %}
+            <li>{{line}}</li>
+            {% endfor %}
+        </ol>
+        <p class="lead mb-1"><b>Salary</b></p>
+        <p style="margin-bottom: 200px;">{{jobs['currency']}}{{jobs['salary']}}</p>
+        
+        
+        
+
+    </div>
+
+
+
+
+    {% include 'footer.html' %}
+</body>
+</html>

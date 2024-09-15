@@ -18,3 +18,13 @@ def load_job_openings():
         column_names = result.keys()
         job_list = [dict(zip(column_names, row)) for row in rows]
         return job_list
+    
+def load_job_byId(id):
+    with engine.connect() as conn:
+        result=conn.execute(text("select * from jobs where id= :value"),{'value':id})
+        job_openings=result.fetchall()
+        column_names=result.keys()
+        job_list=[dict(zip(column_names,row)) for row in job_openings]
+        if len(job_list)<1:
+            return None
+        return job_list[0]
