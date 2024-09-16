@@ -142,11 +142,11 @@ h1 {
     font-size: 1em; /* Increases font size */
     line-height: 1.2em; /* Adds space between lines */
     font-weight: 300; /* Lightens the text */
-    text-align: center; /* Centers the text */
+     /* Centers the text */
     color: #333; /* Text color */
-    max-width: 1000px; /* Limits the width for readability */
     margin: 20px auto; /* Centers the text block and adds space above and below */
     padding: 10px; /* Adds some padding inside the block */
     font-family: 'Arial', sans-serif; /* Changes the font style */
-    text-align: justify;
+    
+    text-align:justify ;
 }
