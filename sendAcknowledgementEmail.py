@@ -1,9 +1,13 @@
 from mailjet_rest import Client
+from dotenv import load_dotenv
 import os
 
-def sendEmailAck(form_data,jobs):
-  api_key = '8e748b5495af5434733bd19a427bdf80'
-  api_secret = '803613b7339a8b4824032a1873cb4cfb'
+load_dotenv()
+
+api_key=os.environ['api_key']
+api_secret=os.environ['api_secret']
+
+def sendEmailAck(form_data,jobs):  
   mailjet = Client(auth=(api_key, api_secret), version='v3.1')
   data = {
     'Messages': [

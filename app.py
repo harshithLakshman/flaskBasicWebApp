@@ -34,5 +34,5 @@ def display_acknoledgement(id):
     sendEmailAck(data,jobs)
     return render_template('application_submitted.html',data=data,jobs=jobs)
 
-if __name__=="__main__":
-    app.run(host="0.0.0.0", debug=True)
+# if __name__=="__main__":
+#     app.run(host="0.0.0.0", debug=True)
