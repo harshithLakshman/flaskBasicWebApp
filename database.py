@@ -28,3 +28,23 @@ def load_job_byId(id):
         if len(job_list)<1:
             return None
         return job_list[0]
+    
+def add_applications(job_id,application):
+    with engine.connect() as conn:
+        trans=conn.begin()
+        result=conn.execute(text("select * from applications where job_id= :job_id AND email= :email"),{'job_id':job_id, 'email':application['email']})
+        if result.fetchone():
+            return "presentInDb"
+        else:
+            query=text("insert into applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) values (:job_id, :name, :email, :linkedin_url, :education, :work_experience, :resume_url) ")
+            conn.execute(query,{'job_id':job_id,
+                            'name':application['name'],
+                            'email':application['email'], 
+                            'linkedin_url':application['linkedin'], 
+                            'education':application['education'], 
+                            'work_experience':application['work_experience'],
+                            'resume_url':application['resume']
+                            }
+                    )
+            trans.commit()
+        

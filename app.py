@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, jsonify,request
-from database import load_job_openings, load_job_byId
+from database import load_job_openings, load_job_byId, add_applications
 
 app = Flask(__name__)
 
@@ -15,6 +15,7 @@ def list_all_jobs():
     return jsonify(jobs)
 
 @app.route('/jobs/<id>')
+@app.route('/jobs/<id>/')
 def list_job_byId(id):
     jobs= load_job_byId(id)
     if not jobs:
@@ -25,12 +26,11 @@ def list_job_byId(id):
 def display_acknoledgement(id):
     data= request.form
     jobs=load_job_byId(id)
-    # return jsonify({
-    #     "message": "Application received successfully!",
-    #     "job_id": id,
-    #     "submitted_data": data
-    # })
+    add_applications_toDb=add_applications(id,data)
+    if add_applications_toDb=='presentInDb':
+        return 'Application already submitted for the current job role'
+   
     return render_template('application_submitted.html',data=data,jobs=jobs)
 
-if __name__=="__main__":
-    app.run(host="0.0.0.0", debug=True)
+# if __name__=="__main__":
+#     app.run(host="0.0.0.0", debug=True)
